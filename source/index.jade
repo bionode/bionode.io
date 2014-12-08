@@ -71,16 +71,22 @@
         | Since both projects are written in JavaScript, 
         a(href="http://github.com/bionode/bionode/issues/9") we collaborate 
         | to avoid duplicated efforts and make it easier to mix modules from each project.
-  .content-title Contributors
+  .content-title
+    i.fa.fa-github
+    |  Core team
   .content-horizontal-rule
-  .content-sub-container.content-logos
-    i.fa.fa-twitter
-    a(href="http://twitter.com/bmpvieira") @bmpvieira
-    a(href="http://twitter.com/yannick__") @yannick__
-    a(href="http://twitter.com/maxogden") @maxogden
-    a(href="https://twitter.com/mafintosh") @mafintosh
-    a(href="http://twitter.com/alanmrice")@alanmrice
-    a(href="http://twitter.com/dasmoth")@dasmoth
+  .content-sub-container
+    for member in public._data.core
+      a(href=member.html_url)
+        img(style="width: 5%;", src=member.avatar_url)
+  .content-title
+    i.fa.fa-github
+    |  Community
+  .content-horizontal-rule
+  .content-sub-container
+    for member in public._data.members
+      a(href=member.html_url)
+        img(style="width: 5%;", src=member.avatar_url)
   .footer
     .footer-directory
       .footer-column
