@@ -1,4 +1,4 @@
-{ 
+{
   "core": [
     {
       "login": "bmpvieira",
@@ -77,6 +77,44 @@
       "site_admin": false
     },
     {
+      "login": "badryan",
+      "id": 6317446,
+      "avatar_url": "https://avatars.githubusercontent.com/u/6317446?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/badryan",
+      "html_url": "https://github.com/badryan",
+      "followers_url": "https://api.github.com/users/badryan/followers",
+      "following_url": "https://api.github.com/users/badryan/following{/other_user}",
+      "gists_url": "https://api.github.com/users/badryan/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/badryan/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/badryan/subscriptions",
+      "organizations_url": "https://api.github.com/users/badryan/orgs",
+      "repos_url": "https://api.github.com/users/badryan/repos",
+      "events_url": "https://api.github.com/users/badryan/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/badryan/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    {
+      "login": "wookoouk",
+      "id": 445964,
+      "avatar_url": "https://avatars.githubusercontent.com/u/445964?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/wookoouk",
+      "html_url": "https://github.com/wookoouk",
+      "followers_url": "https://api.github.com/users/wookoouk/followers",
+      "following_url": "https://api.github.com/users/wookoouk/following{/other_user}",
+      "gists_url": "https://api.github.com/users/wookoouk/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/wookoouk/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/wookoouk/subscriptions",
+      "organizations_url": "https://api.github.com/users/wookoouk/orgs",
+      "repos_url": "https://api.github.com/users/wookoouk/repos",
+      "events_url": "https://api.github.com/users/wookoouk/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/wookoouk/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    {
       "login": "yannickwurm",
       "id": 150113,
       "avatar_url": "https://avatars.githubusercontent.com/u/150113?v=3",
@@ -132,25 +170,6 @@
       "repos_url": "https://api.github.com/users/arq5x/repos",
       "events_url": "https://api.github.com/users/arq5x/events{/privacy}",
       "received_events_url": "https://api.github.com/users/arq5x/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    {
-      "login": "badryan",
-      "id": 6317446,
-      "avatar_url": "https://avatars.githubusercontent.com/u/6317446?v=3",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/badryan",
-      "html_url": "https://github.com/badryan",
-      "followers_url": "https://api.github.com/users/badryan/followers",
-      "following_url": "https://api.github.com/users/badryan/following{/other_user}",
-      "gists_url": "https://api.github.com/users/badryan/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/badryan/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/badryan/subscriptions",
-      "organizations_url": "https://api.github.com/users/badryan/orgs",
-      "repos_url": "https://api.github.com/users/badryan/repos",
-      "events_url": "https://api.github.com/users/badryan/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/badryan/received_events",
       "type": "User",
       "site_admin": false
     },
@@ -322,25 +341,6 @@
       "repos_url": "https://api.github.com/users/roddypr/repos",
       "events_url": "https://api.github.com/users/roddypr/events{/privacy}",
       "received_events_url": "https://api.github.com/users/roddypr/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    {
-      "login": "wookoouk",
-      "id": 445964,
-      "avatar_url": "https://avatars.githubusercontent.com/u/445964?v=3",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/wookoouk",
-      "html_url": "https://github.com/wookoouk",
-      "followers_url": "https://api.github.com/users/wookoouk/followers",
-      "following_url": "https://api.github.com/users/wookoouk/following{/other_user}",
-      "gists_url": "https://api.github.com/users/wookoouk/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/wookoouk/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/wookoouk/subscriptions",
-      "organizations_url": "https://api.github.com/users/wookoouk/orgs",
-      "repos_url": "https://api.github.com/users/wookoouk/repos",
-      "events_url": "https://api.github.com/users/wookoouk/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/wookoouk/received_events",
       "type": "User",
       "site_admin": false
     },
