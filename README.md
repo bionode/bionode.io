@@ -3,6 +3,7 @@
 Please improve it with pull requests.
 
 # Instructions (this workflow could also probably be improved...)
+```bash
 git clone git@github.com:bionode/bionode.github.io.git
 cd bionode.github.io
 git clone -b master git@github.com:bionode/bionode.github.io.git source/www
@@ -15,3 +16,4 @@ git push origin dev
 cd source/www
 git commit -am "Compile 'Commit message'"
 git push origin master
+```
