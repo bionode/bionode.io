@@ -22,11 +22,6 @@
     .header-continue
       a(href="#content") Find out more 
         span.rsaquo) &rsaquo;
-    h1 We are participating in the 
-      a(href="http://software.ac.uk/cw15") Collaborations Workshop 2015 
-      a(href="http://twitter.com/#collabw15") #collabw15
-      p
-        a(href="https://bionode.etherpad.mozilla.org/1") Hackathon Etherpad 
 .content#content
   .content-title Examples
   .content-horizontal-rule
@@ -142,4 +137,10 @@ script.
   m.parentNode.insertBefore(a, m)
     })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
     ga('create', 'UA-54802258-1', 'auto');
-    ga('send', 'pageview');  
+    ga('send', 'pageview');
+
+script.
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'bionode/bionode'
+  };
+script(src="https://sidecar.gitter.im/dist/sidecar.v1.js", async, defer)
