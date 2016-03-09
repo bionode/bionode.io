@@ -1,0 +1,9 @@
+before_script: npm install -g harp
+script: bash ./deploy.sh
+language: node_js
+node_js:
+  - 5.7.1
+env:
+  global:
+    - GH_REF: github.com/bionode/bionode.github.io.git
+    - secure: f9fIKxCQTEWhkFRltpMJyUQAl/TNj7lLfZBkeBB0NpgPL2dOYvYy2gi15aUAYjyHHvkyJjvy2lWWBbSd39vgYP3POl5hCylcYbIPzsshk8wwkwzbiKtXq0jHzxAijuGviFZPOcWfm1yNXLyCL5xJ8i94SuqhHxU4+hCTPSJ9/9I=
