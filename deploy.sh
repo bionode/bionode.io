@@ -5,6 +5,14 @@ set -e # exit with nonzero exit code if anything fails
 rm -rf www || exit 0;
 mkdir www;
 
+rm _data.json
+node members.js bionode | \
+  sed -e 's|$|,|' -e '$s|,$||' | \
+  (echo '[' && cat - && echo ']') | \
+  jq '.| {"members": (.[0] - .[1]), "core": .[1] }' > _data.json
+
+rm -r node_modules
+
 # run our compile script, discussed above
 harp compile
 # go to the out directory and create a *new* Git repo
