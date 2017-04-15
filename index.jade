@@ -87,7 +87,7 @@
   .content-sub-container
     for member in public._data.core
       a(href=member.html_url)
-        img(style="width: 5%;", src=member.avatar_url)
+        img(src="#{member.avatar_url}&s=80" height=80 width=80)
   .content-title
     i.fa.fa-github
     |  Community
@@ -95,7 +95,7 @@
   .content-sub-container
     for member in public._data.members
       a(href=member.html_url)
-        img(style="width: 5%;", src=member.avatar_url)
+        img(src="#{member.avatar_url}&s=80" height=80 width=80)
   .footer
     .footer-directory
       .footer-column
