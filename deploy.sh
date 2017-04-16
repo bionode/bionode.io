@@ -9,7 +9,7 @@ rm _data.json
 node members.js bionode | \
   sed -e 's|$|,|' -e '$s|,$||' | \
   (echo '[' && cat - && echo ']') | \
-  jq '.| {"members": (.[0] - .[1]), "core": .[1] }' > _data.json
+  jq '.| {"community": (.[0] - .[1]), "team": .[1] }' > _data.json
 
 rm -r node_modules
 

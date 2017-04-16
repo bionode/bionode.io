@@ -22,7 +22,7 @@ var requestOptions = {
   }
 }
 
-var replaceStream = function(fromString, toString) {
+var replaceStream = function (fromString, toString) {
   return through.obj(function (inputText, enc, next) {
     this.push(inputText.replace(fromString, toString))
     next()
