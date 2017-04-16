@@ -6,7 +6,7 @@ node_js:
 env:
   global:
     - GH_REF: github.com/bionode/bionode.github.io.git
-    - secure: f9fIKxCQTEWhkFRltpMJyUQAl/TNj7lLfZBkeBB0NpgPL2dOYvYy2gi15aUAYjyHHvkyJjvy2lWWBbSd39vgYP3POl5hCylcYbIPzsshk8wwkwzbiKtXq0jHzxAijuGviFZPOcWfm1yNXLyCL5xJ8i94SuqhHxU4+hCTPSJ9/9I=
+    - secure: IfUmyNuaYjeRtiXneopAmClPSziRqqcqiunFeG7oXenGR5s9AkgSNtAyCMPUGYcDtYKAtwv1bxWhKgXaOcMhd16pjVBqgi6rb+uAR9+VWC7imWd9cnXz9RvLjTSmE3Y8cK93/wpv5sCpQZvRczSddGvb8/PPbw4iePT42xwwFA4=
 branches:
   only:
     - dev

@@ -82,20 +82,20 @@
         | to avoid duplicated efforts and make it easier to mix modules from each project.
   .content-title
     i.fa.fa-github
-    |  Core team
+    |  Team
   .content-horizontal-rule
   .content-sub-container
-    for member in public._data.core
+    for member in public._data.team
       a(href=member.html_url)
-        img(style="width: 5%;", src=member.avatar_url)
+        img(src="#{member.avatar_url}&s=80" height=80 width=80)
   .content-title
     i.fa.fa-github
     |  Community
   .content-horizontal-rule
   .content-sub-container
-    for member in public._data.members
+    for member in public._data.community
       a(href=member.html_url)
-        img(style="width: 5%;", src=member.avatar_url)
+        img(src="#{member.avatar_url}&s=80" height=80 width=80)
   .footer
     .footer-directory
       .footer-column
