@@ -7,9 +7,7 @@
         li
           a(href="https://rawgit.com/bionode/bionode/master/docs/bionode.html") Documentation
         li
-          a(href="http://dat-data.com") Dat
-        li
-          a(href="http://obf.github.io/GSoC/ideas/#bionode") GSoC 2016
+          a(href="http://project.bionode.io") Project Board
       a(href="https://github.com/bionode/bionode#readme", target="_blank")
         .button
           span.octocat 
@@ -22,13 +20,6 @@
     .header-continue
       a(href="#content") Find out more 
         span.rsaquo &rsaquo;
-.content#content
-  .content-title Announcements
-  .content-horizontal-rule
-  .content-sub-container.announcements
-    img(style="width:100%; height:100%; margin: auto; align: center;", src="images/bionode-obd.png")
-    h1
-      a(href="http://www.bioinformaticsopendays.com/") REGISTER
 .content#content
   .content-title Examples
   .content-horizontal-rule
@@ -87,7 +78,7 @@
   .content-sub-container
     for member in public._data.team
       a(href=member.html_url)
-        img(src="#{member.avatar_url}&s=80" height=80 width=80)
+        img(src=member.avatar_url height=80 width=80)
   .content-title
     i.fa.fa-github
     |  Community
@@ -95,7 +86,7 @@
   .content-sub-container
     for member in public._data.community
       a(href=member.html_url)
-        img(src="#{member.avatar_url}&s=80" height=80 width=80)
+        img(src=member.avatar_url height=80 width=80)
   .footer
     .footer-directory
       .footer-column
