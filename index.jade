@@ -87,6 +87,14 @@
     for member in public._data.community
       a(href=member.html_url)
         img(src=member.avatar_url height=80 width=80)
+  .content-title
+    i.fa.fa-github
+    |  Events
+  .content-horizontal-rule
+  .content-sub-container
+    for member in public._data.events
+      a(href=member.html_url)
+        img(src=member.avatar_url height=40 width=40)
   .footer
     .footer-directory
       .footer-column
