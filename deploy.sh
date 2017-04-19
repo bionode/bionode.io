@@ -5,10 +5,10 @@ set -e # exit with nonzero exit code if anything fails
 rm -rf www || exit 0;
 mkdir www;
 
-rm _data.json bionode_members.json bionode_hack.json
+rm _data.json
 
 node members.js bionode | jq -s '.| {"community": (.[0] - .[1]), "team": .[1] }' > bionode_members.json
-node members.js bionode-hack | jq -s '. | flatten | unique_by(.login) | {"events": . }' > bionode_hack.json
+node members.js bionode-hack | jq -s '.[] | [ . ] | add | unique_by(.login) | {"events": . }' > bionode_hack.json
 
 jq -s '. | add' bionode_members.json bionode_hack.json > _data.json
 
