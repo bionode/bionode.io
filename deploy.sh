@@ -6,11 +6,15 @@ rm -rf www || exit 0;
 mkdir www;
 
 rm _data.json
-node members.js bionode | \
-  sed -e 's|$|,|' -e '$s|,$||' | \
-  (echo '[' && cat - && echo ']') | \
-  jq '.| {"community": (.[0] - .[1]), "team": .[1] }' > _data.json
 
+node members.js bionode | jq -s '.| {"community": (.[0] - .[1]), "team": .[1] }' > bionode_members.json
+node members.js bionode-hack | jq -s '. | flatten | unique_by(.login) | {"events": . }' > bionode_hack.json
+
+jq -s '. | add' bionode_members.json bionode_hack.json > _data.json
+
+rm bionode_members.json bionode_hack.json
+
+# Need to remove node_modules to avoid a conflict that causes `harp compile` to fail
 rm -r node_modules
 
 # run our compile script, discussed above

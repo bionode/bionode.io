@@ -7,6 +7,8 @@ var pumpify = require('pumpify')
 var requestStream = require('requesturl-stream')
 var ts = require('tool-stream')
 var through = require('through2')
+var request = require('request')
+var parseLinkHeader = require('parse-link-header')
 
 var TOKEN = process.env.GH_TOKEN
 
@@ -29,12 +31,25 @@ var replaceStream = function (fromString, toString) {
   })
 }
 
+var paginateRequest = through.obj(function (obj, enc, next) {
+  requestOptions.url = obj
+  request(requestOptions, (err, res, json) => {
+    if (err) { console.log(err) }
+    this.push(json)
+    var pages = parseLinkHeader(res.headers.link)
+    if (pages && pages.next) {
+      paginateRequest.write(pages.next.url)
+    }
+    next()
+  })
+})
+
 var pipeline = pumpify.obj(
   requestStream(requestOptions),
   ts.arraySplit(), // 3 objects (i.e. 3 teams: Contributors, Core, GSoC16)
   ts.extractProperty('members_url'),
   replaceStream('{/member}', ''),
-  requestStream(requestOptions),
+  paginateRequest,
   ts.JSONToBuffer(),
   process.stdout
 )
