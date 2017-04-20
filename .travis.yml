@@ -3,6 +3,16 @@ script: bash ./deploy.sh
 language: node_js
 node_js:
   - 5.7.1
+before_install:
+  - cd $HOME
+  - wget https://github.com/stedolan/jq/releases/download/jq-1.5/jq-1.5.tar.gz
+  - tar -zxvf jq-1.5.tar.gz
+  - cd jq-1.5
+  - ./configure --disable-maintainer-mode
+  - make -j8
+  - sudo make install
+  - alias jq=$HOME/jq
+  - cd $TRAVIS_BUILD_DIR
 env:
   global:
     - GH_REF: github.com/bionode/bionode.github.io.git
