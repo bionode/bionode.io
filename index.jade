@@ -5,9 +5,15 @@
         li
           a(href="index.html") Home
         li
-          a(href="https://rawgit.com/bionode/bionode/master/docs/bionode.html") Documentation
+          a(href="http://doc.bionode.io") Documentation
         li
           a(href="http://project.bionode.io") Project Board
+        li
+          a(href="https://github.com/bionode/bionode/blob/master/CONTRIBUTING.md") Contribute
+        li
+          a(href="https://github.com/bionode/bionode/issues/35") Roadmap
+        li
+          a(href="https://blog.bionode.io") Blog
       a(href="https://github.com/bionode/bionode#readme", target="_blank")
         .button
           span.octocat 
@@ -21,6 +27,25 @@
       a(href="#content") Find out more 
         span.rsaquo &rsaquo;
 .content#content
+  .content-title About
+  .content-horizontal-rule
+  .content-sub-container.about
+    p Bionode.io is an 
+      a(href="http://blog.bionode.io") Open Source community 
+      | that aims at building 
+      strong highly reusable tools and code 
+      | for bioinformatics by leveraging the Node.JS ecosystem.
+    p We want to use 
+      a(href="https://github.com/substack/stream-handbook") Node.JS Streams 
+      | to process 
+      a(href="http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002195") big genomic data
+      |.
+    p We welcome all kinds of 
+      a(href="https://github.com/bionode/bionode/blob/master/CONTRIBUTING.md") contributions 
+      | at all levels of experience, either code, knowledge, questions or suggestions.
+
+
+.content#content
   .content-title Examples
   .content-horizontal-rule
   .content-sub-container.codeExamples
@@ -32,7 +57,7 @@
       p # Download all Sequence Read Archives for arthropoda and extract a fastq for each
       h3 $ bionode-ncbi download sra arthropoda | bionode-sra fastq-dump
       <!-- npm install bionode-fasta -g -->
-      p # Parse sequences in a fasta file into one JSON object per line, collect the ones that match chr11 and in fasta
+      p # Parse sequences in a fasta file into one JSON object per line, collect the ones that match chr11
       h3 $ cat genome.fasta | bionode-fasta | grep chr11 | bionode-fasta --write
       <!-- npm install dat -->
       <!-- dat init -->
@@ -125,7 +150,7 @@
               | GitHub
     .footer-credits
       span.footer-emphasized bionode 
-      | &bull; 2014 &bull; design by 
+      | &bull; 2014-2017 &bull; design by 
       a(href="https://github.com/flipside-org") flipside  
       | for 
       a(href="https://dat-data.com") dat 
