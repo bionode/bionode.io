@@ -16,7 +16,7 @@ before_install:
 env:
   global:
     - GH_REF: github.com/bionode/bionode.github.io.git
-    - secure: IfUmyNuaYjeRtiXneopAmClPSziRqqcqiunFeG7oXenGR5s9AkgSNtAyCMPUGYcDtYKAtwv1bxWhKgXaOcMhd16pjVBqgi6rb+uAR9+VWC7imWd9cnXz9RvLjTSmE3Y8cK93/wpv5sCpQZvRczSddGvb8/PPbw4iePT42xwwFA4=
+    - secure: KY2qJCSW2j61Ro8Wg/63dy7BJxJYZdcGpQMEK8VmYeORT3h3aUy9u3/Fp/xBxhyujOJtrE9mJ+fhLGxQTGJsVhYfBP9uVY9fseyb7FVTQ4TL0ALr2LqkrM25VZNRR/xOp1xtAPvImzO2ZHHu5zSk+araqCiQMCbAIW1m5iifL7M=
 branches:
   only:
     - dev
