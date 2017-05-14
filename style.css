@@ -216,6 +216,9 @@ body {
 .content-feature-card img {
     margin: 0 auto;
     display: block;
+    margin-top:25px; 
+    max-height:100px;
+    max-width:300px;
 }
 
 .content-feature-cards > :last-child {

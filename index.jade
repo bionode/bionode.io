@@ -119,6 +119,33 @@
     for member in public._data.events
       a(href=member.html_url)
         img(src="#{member.avatar_url}&s=40"  height=40 width=40)
+  .content-title Our Users
+  .content-horizontal-rule
+  .content-sub-container.content-feature-cards
+    .content-feature-card(onclick="window.open('http://afra.sbcs.qmul.ac.uk', '_blank')" style="cursor:pointer;")
+      img(src="images/users/afra.png")
+      .content-card-title Afra
+      .content-card-subtitle  Genome Annotation for the Masses - afra.sbcs.qmul.ac.uk
+    .content-feature-card(onclick="window.open('http://genevalidator.sbcs.qmul.ac.uk', '_blank')" style="cursor:pointer;")
+      img(src="images/users/genevalidator.png")
+      .content-card-title GeneValidator
+      .content-card-subtitle  Identify problems with protein-coding gene predictions.
+    .content-feature-card(onclick="window.open('http://www.geodiver.co.uk', '_blank')" style="cursor:pointer;")
+      img(src="images/users/geodiver.png")
+      .content-card-title GeoDiver
+      .content-card-subtitle  An easy to use web tool for analysing GEO datasets.
+    .content-feature-card(onclick="window.open('https://uclex.cs.ucl.ac.uk', '_blank')" style="cursor:pointer;")
+      img(src="images/users/phenopolis.png")
+      .content-card-title Phenopolis
+      .content-card-subtitle  An Open Platform for Harmonization &amp; Analysis of Sequencing &amp; Phenotype Data.
+    .content-feature-card(onclick="window.open('https://repositive.io', '_blank')" style="cursor:pointer;")
+      img(src="images/users/repositive.png")
+      .content-card-title Repositive.io
+      .content-card-subtitle  One-click access to human genomic data.
+    .content-feature-card(onclick="window.open('http://openretractions.com', '_blank')" style="cursor:pointer;")
+      img(src="images/users/openretractions.png")
+      .content-card-title OpenRetractions.com
+      .content-card-subtitle  Check for retraction notices of any journal article.
   .footer
     .footer-directory
       .footer-column
