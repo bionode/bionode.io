@@ -537,5 +537,16 @@ body {
 }
 
 #features .content-feature-card {
-  vertical-align: top;
+    vertical-align: top;
+}
+
+
+@media screen and (max-width: 1500px) {
+    .content-feature-card {
+        margin: 0 auto 20px auto;
+    }
+    .content-sub-container {
+        margin: 0 20px 20px 20px;
+        padding-top: 30px;
+    }
 }
