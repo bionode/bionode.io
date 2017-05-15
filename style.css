@@ -535,3 +535,7 @@ body {
 .about {
     font-size:1.4rem;
 }
+
+#features .content-feature-card {
+  vertical-align: top;
+}
