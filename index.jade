@@ -50,18 +50,18 @@
   .content-sub-container.codeExamples
     code
       <!--npm install bionode-ncbi -g-->
-      p # Download all bacteria gff files
-      h3 $ bionode-ncbi download gff bacteria
+      p # Download human genome
+      h3 $ bionode-ncbi download assembly human
       <!-- npm install bionode-sra -g -->
       p # Download all Sequence Read Archives for arthropoda and extract a fastq for each
       h3 $ bionode-ncbi download sra arthropoda | bionode-sra fastq-dump
       <!-- npm install bionode-fasta -g -->
       p # Parse sequences in a fasta file into one JSON object per line, collect the ones that match chr11
       h3 $ cat genome.fasta | bionode-fasta | grep chr11 | bionode-fasta --write
-      <!-- npm install dat -->
-      <!-- dat init -->
-      p # Retrieves all the metadata about formicidae on the assembly database and save into a Dat repository
-      h3 $ bionode-ncbi search assembly formicidae | dat import --json
+      p # Search pubmed for ten retracted papers and use jq to view the paper's title
+      h3 $ bionode-ncbi search -l 10 pubmed "\"Retracted Publication\"" | jq '.title'
+      p # Search pubmed for papers with the word 'Cancer' in the title
+      h3 $ bionode-ncbi search pubmed 'Title:Cancer'
       .content-subtitle.tryBioNode
         h3 Try them online at
         h1
