@@ -50,25 +50,25 @@
   .content-sub-container.codeExamples
     code
       <!--npm install bionode-ncbi -g-->
-      p # Download all bacteria gff files
-      h3 $ bionode-ncbi download gff bacteria
+      p # Download human genome
+      h3 $ bionode-ncbi download assembly human
       <!-- npm install bionode-sra -g -->
       p # Download all Sequence Read Archives for arthropoda and extract a fastq for each
       h3 $ bionode-ncbi download sra arthropoda | bionode-sra fastq-dump
       <!-- npm install bionode-fasta -g -->
       p # Parse sequences in a fasta file into one JSON object per line, collect the ones that match chr11
       h3 $ cat genome.fasta | bionode-fasta | grep chr11 | bionode-fasta --write
-      <!-- npm install dat -->
-      <!-- dat init -->
-      p # Retrieves all the metadata about formicidae on the assembly database and save into a Dat repository
-      h3 $ bionode-ncbi search assembly formicidae | dat import --json
+      p # Search pubmed for ten retracted papers and use jq to view the paper's title
+      h3 $ bionode-ncbi search -l 10 pubmed "\"Retracted Publication\"" | jq '.title'
+      p # Search pubmed for papers with the word 'Cancer' in the title
+      h3 $ bionode-ncbi search pubmed 'Title:Cancer'
       .content-subtitle.tryBioNode
         h3 Try them online at
         h1
           a(href="http://try.bionode.io") try.bionode.io
   .content-title Features
   .content-horizontal-rule
-  .content-sub-container.content-feature-cards
+  .content-sub-container.content-feature-cards#features
     .content-feature-card
       .content-card-title Scalable
       .content-card-subtitle Streams are everywhere in bionode. This avoids storing intermediate data on disk or run out of memory. Building complex but reproducible pipelines is also easier with Streams
@@ -78,23 +78,6 @@
     .content-feature-card
       .content-card-title Modular
       .content-card-subtitle Every tool tries to do just one thing well and work independently. This gives more flexibility when building pipelines and more resolution for tracking versions and changes.
-  .content-title Integration with others
-  .content-horizontal-rule
-  .content-sub-container.content-feature-cards
-    .content-feature-card
-      .content-card-title Dat
-      .content-card-subtitle Bionode's founder 
-        a(href="http://twitter.com/bmpvieira") Bruno Vieira 
-        | is a 
-        a(href="http://dat-data.com/team.html") Dat team member
-        | , and consequently both projects are very close and work toward integration. Bionode learns some Node from Dat and Dat learns some Bioinformatics from Bionode.
-    .content-feature-card
-      .content-card-title BioJS
-      .content-card-subtitle BioJS are modules to 
-        em Represent biological data on the web. 
-        | Since both projects are written in JavaScript, 
-        a(href="http://github.com/bionode/bionode/issues/9") we collaborate 
-        | to avoid duplicated efforts and make it easier to mix modules from each project.
   .content-title
     i.fa.fa-github
     |  Team
@@ -119,6 +102,59 @@
     for member in public._data.events
       a(href=member.html_url)
         img(src="#{member.avatar_url}&s=40"  height=40 width=40)
+  .content-title Our Users
+  .content-horizontal-rule
+  .content-sub-container.content-feature-cards
+    .content-feature-card
+      img(src="images/users/afra.png")
+      a(href="http://afra.sbcs.qmul.ac.uk" target="_blank") 
+        .content-card-title Afra
+      .content-card-subtitle  Genome Annotation for the Masses - afra.sbcs.qmul.ac.uk
+    .content-feature-card
+      img(src="images/users/genevalidator.png")
+      a(href="http://genevalidator.sbcs.qmul.ac.uk" target="_blank") 
+        .content-card-title GeneValidator
+      .content-card-subtitle  Identify problems with protein-coding gene predictions.
+    .content-feature-card
+      img(src="images/users/geodiver.svg")
+      a(href="http://www.geodiver.co.uk" target="_blank") 
+        .content-card-title GeoDiver
+      .content-card-subtitle  An easy to use web tool for analysing GEO datasets.
+    .content-feature-card
+      img(src="images/users/phenopolis.png")
+      a(href="https://uclex.cs.ucl.ac.uk" target="_blank") 
+        .content-card-title Phenopolis
+      .content-card-subtitle  An Open Platform for Harmonization &amp; Analysis of Sequencing &amp; Phenotype Data.
+    .content-feature-card
+      img(src="images/users/repositive.png")
+      a(href="https://repositive.io" target="_blank") 
+        .content-card-title Repositive.io
+      .content-card-subtitle  One-click access to human genomic data.
+    .content-feature-card
+      img(src="images/users/openretractions.png")
+      a(href="http://openretractions.com" target="_blank") 
+        .content-card-title OpenRetractions.com
+      .content-card-subtitle  Check for retraction notices of any journal article.
+
+  .content-title Acknowledgements
+  .content-horizontal-rule
+  .content-sub-container.content-feature-cards
+    .content-feature-card
+      img(src="images/users/dat.png")
+      a(href="http://openretractions.com" target="_blank")
+        .content-card-title Dat
+      //- .content-card-subtitle  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    .content-feature-card
+      img(src="images/users/mozillascience.svg")
+      a(href="https://science.mozilla.org" target="_blank")
+        .content-card-title Mozilla Science Lab
+      //- .content-card-subtitle  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    .content-feature-card
+      img(src="images/users/wurmlab.png")
+      a(href="https://wurmlab.github.io" target="_blank")
+        .content-card-title WurmLab.github.io
+      //- .content-card-subtitle  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+
   .footer
     .footer-directory
       .footer-column
