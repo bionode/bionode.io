@@ -12,6 +12,7 @@
     "tool-stream": "^0.2.1"
   },
   "devDependencies": {
+    "harp": "^0.24.0",
     "standard": "^10.0.1"
   },
   "scripts": {
